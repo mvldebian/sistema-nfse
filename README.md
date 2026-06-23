@@ -3,14 +3,21 @@
 O Sistema NFS-e é uma plataforma web desenvolvida para guarda, gestão e distribuição de notas fiscais de serviços eletrônicas, oferecendo segurança, conformidade e facilidade de uso para contribuintes e administradores. Este sistema é ideal para empresas que emitem notas fiscais de serviços e desejam um repositório centralizado, seguro e de fácil acesso para seus documentos fiscais.
 
 🔐 Autenticação e Segurança
+
 Login com CPF/CNPJ: usuários acessam utilizando seu documento cadastrado.
+
 Autenticação por Token com envio de código de verificação por e-mail (PHPMailer com SMTP).
+
 Proteção contra bots: integração com Cloudflare Turnstile (opcional, com configuração de estilo via config.php).
+
 Sessão segura: gerenciamento de sessão com hash de senha (bcrypt).
 
 👤 Perfil do Usuário
+
 Pasta exclusiva por usuário: cada usuário possui uma subpasta dentro de uploads/ nomeada pelo CPF/CNPJ.
+
 Download de arquivos: download individual ou da pasta inteira compactada em ZIP.
+
 Métricas personalizadas: dashboard com contagem de XMLs, DANFes (PDFs) e uso de disco com quota de 1 GB
 
 🛠️ Painel Administrativo
