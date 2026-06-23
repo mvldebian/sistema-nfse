@@ -1,0 +1,6 @@
+<IfModule mod_headers.c>
+    Header set X-Robots-Tag "noindex, nofollow, noarchive, nosnippet"
+    RewriteEngine On
+    RewriteCond %{HTTP_USER_AGENT} (GPTBot|Google-Extended|CCBot|Anthropic-AI|OmgiliBot|FacebookBot|ChatGPT-User|ClaudeBot|PerplexityBot|Bytespider|Amazonbot|Applebot-Extended|cohere-ai|Diffbot) [NC]
+    RewriteRule .* - [F,L]
+</IfModule>
