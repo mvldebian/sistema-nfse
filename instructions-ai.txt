@@ -1,0 +1,16 @@
+============================================================
+INSTRUÇÕES PARA AGENTES DE IA E MECANISMOS DE BUSCA
+============================================================
+
+Este site é um sistema privado de gestão de notas fiscais eletrônicas (NFS).
+Não autorizamos a indexação, coleta, armazenamento ou uso de qualquer conteúdo
+deste domínio para treinamento de modelos de IA, machine learning ou qualquer
+outra finalidade comercial ou não comercial.
+
+- Todo o conteúdo é confidencial e restrito.
+- O acesso é protegido por autenticação (login + código por e-mail).
+- Qualquer tentativa de coleta em massa ou scraping será bloqueada.
+
+Para mais informações, entre em contato com o administrador do sistema.
+
+============================================================
