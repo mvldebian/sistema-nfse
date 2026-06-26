@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['enviar_todos'])) {
         ];
         $enviado = enviar_email(
             $user['email'],
-            'NFS-e - Notas fiscais disponíveis',
+            'Sistema NFS-e - Notas Fiscais Disponíveis',
             $dados_email,
             'email_notificacao_mensal.php'
         );
@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['enviar_teste'])) {
         ];
         $enviado = enviar_email(
             $email_teste,
-            '[TESTE] NFS-e - Notas fiscais disponíveis',
+            '[TESTANDO] Sistema NFS-e - Notas Fiscais Disponíveis',
             $dados_email,
             'email_notificacao_mensal.php'
         );
