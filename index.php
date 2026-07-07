@@ -30,6 +30,8 @@ if (isset($_SESSION['usuario_id'])) {
         </div>
         <nav>
             <a href="/admin/index.php"><i class="fas fa-sign-in-alt"></i> Painel Administrativo</a>
+            <a href="contador_login.php"><i class="fas fa-sign-in-alt"></i> Acesso do Contador</a>
+            <a href="index.php"><i class="fas fa-user-tie"></i> Página Inicial</a>
             <button id="btnTema" class="btn-tema"><i class="fas fa-sun"></i></button>
         </nav>
     </header>

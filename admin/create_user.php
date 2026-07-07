@@ -118,13 +118,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
     <header>
-        <div class="logo"><i class="fas fa-user-cog"></i> Admin</div>
+        <div class="logo"><i class="fas fa-user-cog"></i> Painel Administrativo</div>
         <nav>
             <a href="dashboard.php"><i class="fas fa-home"></i> Início</a>
             <a href="perfil.php"><i class="fas fa-user"></i> Meu Perfil</a>
             <a href="create_user.php"><i class="fas fa-user-plus"></i> Novo Usuário</a>
             <a href="browse.php"><i class="fas fa-folder-open"></i> Pastas</a>
             <a href="agendamento.php"><i class="fas fa-calendar-alt"></i> Agendamento</a>
+            <a href="informativos.php"><i class="fas fa-bullhorn"></i> Informativos</a>
             <a href="logout.php"><i class="fas fa-sign-out-alt"></i> Sair</a>
             <button id="btnTema" class="btn-tema"><i class="fas fa-sun"></i></button>
         </nav>

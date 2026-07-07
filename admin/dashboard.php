@@ -63,6 +63,7 @@ unset($_SESSION['admin_mensagem'], $_SESSION['admin_erro']);
             <a href="create_user.php"><i class="fas fa-user-plus"></i> Novo Usuário</a>
             <a href="browse.php"><i class="fas fa-folder-open"></i> Pastas</a>
             <a href="agendamento.php"><i class="fas fa-calendar-alt"></i> Agendamento</a>
+            <a href="informativos.php"><i class="fas fa-bullhorn"></i> Informativos</a>
             <a href="logout.php"><i class="fas fa-sign-out-alt"></i> Sair</a>
             <button id="btnTema" class="btn-tema"><i class="fas fa-sun"></i></button>
         </nav>
