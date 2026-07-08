@@ -31,3 +31,5 @@ CREATE TABLE IF NOT EXISTS contadores (
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE,
     UNIQUE KEY unique_email_usuario (email, usuario_id)
 );
+
+ALTER TABLE usuarios ADD COLUMN ativo TINYINT(1) DEFAULT 1;
