@@ -38,3 +38,37 @@ document.addEventListener('DOMContentLoaded', function() {
         aplicarTema(novoTema);
     });
 });
+
+// ===== COOKIE BANNER - FUNÇÕES GLOBAIS =====
+function aceitarCookies() {
+    console.log('Cookie aceito');
+    localStorage.setItem('cookies_aceitos', 'sim');
+    var banner = document.getElementById('cookieBanner');
+    if (banner) {
+        banner.style.display = 'none';
+    }
+}
+
+function fecharCookie() {
+    console.log('Cookie recusado');
+    var banner = document.getElementById('cookieBanner');
+    if (banner) {
+        banner.style.display = 'none';
+    }
+}
+
+// Exibe o banner se não houver consentimento
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM carregado - verificando cookie');
+    if (localStorage.getItem('cookies_aceitos') !== 'sim') {
+        var banner = document.getElementById('cookieBanner');
+        if (banner) {
+            console.log('Exibindo banner de cookies');
+            banner.style.display = 'block';
+        } else {
+            console.warn('Elemento cookieBanner não encontrado');
+        }
+    } else {
+        console.log('Cookies já aceitos');
+    }
+});

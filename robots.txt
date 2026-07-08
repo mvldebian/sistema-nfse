@@ -1,5 +1,43 @@
+# ======================================================
+# ROBOTS.TXT - SISTEMA NFS-E
+# Instruções para motores de busca e agentes de IA
+# ======================================================
+
+# Bloqueio geral para todos os agentes
 User-agent: *
-Disallow: /
+Disallow: /admin/
+Disallow: /uploads/
+Disallow: /includes/
+Disallow: /cron/
+Disallow: /logs/
+Disallow: /vendor/
+Disallow: /templates/
+Disallow: /assets/
+Disallow: /download.php
+Disallow: /download_pasta.php
+Disallow: /auth.php
+Disallow: /auth_contador.php
+Disallow: /verify.php
+Disallow: /verify_contador.php
+Disallow: /contador_login.php
+Disallow: /contador_dashboard.php
+Disallow: /logout.php
+Disallow: /logout_contador.php
+Disallow: /admin/auth.php
+Disallow: /admin/dashboard.php
+Disallow: /admin/create_user.php
+Disallow: /admin/browse.php
+Disallow: /admin/perfil.php
+Disallow: /admin/agendamento.php
+Disallow: /admin/delete.php
+Disallow: /admin/logout.php
+Disallow: /admin/agendamento.php
+Disallow: /admin/informativos.php
+Disallow: /contador.php
+
+# ======================================================
+# BLOQUEIO ESPECÍFICO PARA AGENTES DE IA
+# ======================================================
 
 User-agent: GPTBot
 Disallow: /
@@ -10,37 +48,25 @@ Disallow: /
 User-agent: CCBot
 Disallow: /
 
-User-agent: Anthropic-AI
-Disallow: /
-
-User-agent: OmgiliBot
-Disallow: /
-
-User-agent: FacebookBot
-Disallow: /
-
-User-agent: ChatGPT-User
+User-agent: anthropic-ai
 Disallow: /
 
 User-agent: ClaudeBot
 Disallow: /
 
-User-agent: PerplexityBot
+User-agent: Omgilibot
 Disallow: /
 
-User-agent: Bytespider
+User-agent: FacebookBot
 Disallow: /
 
-User-agent: Amazonbot
+User-agent: TwitterBot
 Disallow: /
 
-User-agent: Applebot-Extended
+User-agent: AppleBot
 Disallow: /
 
-User-agent: cohere-ai
-Disallow: /
-
-User-agent: Diffbot
-Disallow: /
-
-Crawl-delay: 10
+# ======================================================
+# SITEMAP (descomente se tiver)
+# ======================================================
+# Sitemap: https://seudominio.com/sitemap.xml

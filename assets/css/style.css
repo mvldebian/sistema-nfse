@@ -737,6 +737,43 @@ body.tema-escuro .cf-turnstile iframe {
     filter: brightness(0.9);
 }
 
+/* ANIMAÇÃO DO BANNER DE COOKIES */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
+/* AJUSTE PARA TEMA ESCURO (se necessário, o inline já trata) */
+body.tema-escuro #cookieBanner > div {
+    background: #0a0a0a !important;
+    border-color: rgba(26, 58, 92, 0.5) !important;
+}
+body.tema-escuro #cookieBanner p {
+    color: #dde7f0 !important;
+}
+body.tema-escuro #cookieBanner button:last-child {
+    background: rgba(255,255,255,0.05) !important;
+    border-color: rgba(255,255,255,0.08) !important;
+}
+body.tema-escuro #cookieBanner button:last-child:hover {
+    background: rgba(255,255,255,0.12) !important;
+}
 
+/* Remove margem dupla entre parágrafos */
+.conteudo-informativo p {
+    margin: 0 0 6px 0;
+    line-height: 1.6;
+}
+.conteudo-informativo br {
+    display: block;
+    content: '';
+    margin: 0;
+}
+
+}

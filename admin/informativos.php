@@ -233,7 +233,7 @@ function enviar_email_raw($destino, $assunto, $corpo) {
 </head>
 <body>
     <header>
-        <div class="logo"><i class="fas fa-bullhorn"></i> Painel Administrativo</div>
+        <div class="logo"><i class="fas fa-user-cog"></i> Painel Administrativo</div>
         <nav>
             <a href="dashboard.php"><i class="fas fa-home"></i> Início</a>
             <a href="perfil.php"><i class="fas fa-user"></i> Perfil</a>
@@ -259,7 +259,7 @@ function enviar_email_raw($destino, $assunto, $corpo) {
 
             <div style="background:#e3edf7; border-radius:12px; padding:15px 20px; margin-bottom:20px;">
                 <p><i class="fas fa-users"></i> <strong><?= $total_destinatarios ?></strong> destinatários (usuários + contadores ativos).</p>
-                <p style="font-size:0.9rem; color:#555;">O e-mail será enviado com cabeçalho e rodapé institucionais.</p>
+                <p style="font-size:0.9rem; color:#555;">O e-mail será enviado com cabeçalho e rodapé institucionais pré definidos em Templates.</p>
             </div>
 
             <form method="POST" id="formEnvio">
@@ -269,11 +269,11 @@ function enviar_email_raw($destino, $assunto, $corpo) {
                     <input type="text" name="assunto" id="assunto" class="form-control" placeholder="Digite o assunto do e-mail" required style="width:100%; padding:12px; border-radius:12px; border:1.5px solid #dde7f0; font-size:1rem;">
                 </div>
                 <div class="form-group">
-                    <label for="conteudo"><i class="fas fa-edit"></i> Conteúdo (HTML)</label>
+                    <label for="conteudo"><i class="fas fa-edit"></i> Conteúdo (HTML) para nova linha sem espaçamento utilize SHIFT+ENTER</label>
                     <textarea name="conteudo" id="conteudo" class="form-control" rows="10" style="width:100%; padding:12px; border-radius:12px; border:1.5px solid #dde7f0; font-size:1rem;"></textarea>
                 </div>
                 <button type="submit" class="btn btn-block" onclick="return confirm('Enviar para todos os <?= $total_destinatarios ?> destinatários?')">
-                    <i class="fas fa-paper-plane"></i> Enviar para todos
+                    <i class="fas fa-paper-plane"></i> Enviar para Todos
                 </button>
             </form>
 
@@ -292,19 +292,19 @@ function enviar_email_raw($destino, $assunto, $corpo) {
         <div class="modal-box" style="max-width: 800px;">
             <button class="modal-close" onclick="fecharModal('modalTeste')">&times;</button>
             <h3><i class="fas fa-vial"></i> Envio de Teste</h3>
-            <p style="color:#666; margin-bottom:20px;">Envie uma versão de teste do informativo para um único e-mail.</p>
+            <br><p style="color:#666; margin-bottom:20px;">Versão de teste do informativo para um único E-mail.</p>
             <form method="POST" id="formTeste">
                 <input type="hidden" name="action" value="enviar_teste">
                 <div class="form-group">
-                    <label for="email_teste"><i class="fas fa-envelope"></i> E-mail de teste</label>
-                    <input type="email" name="email_teste" id="email_teste" class="form-control" placeholder="digite@email.com" required style="width:100%; padding:12px; border-radius:12px; border:1.5px solid #dde7f0; font-size:1rem;">
+                    <label for="email_teste"><i class="fas fa-envelope"></i> E-mail de Teste</label>
+                    <input type="email" name="email_teste" id="email_teste" class="form-control" placeholder="pessoa@exemplo.com.br" required style="width:100%; padding:12px; border-radius:12px; border:1.5px solid #dde7f0; font-size:1rem;">
                 </div>
                 <div class="form-group">
                     <label for="assunto_teste"><i class="fas fa-tag"></i> Assunto</label>
                     <input type="text" name="assunto_teste" id="assunto_teste" class="form-control" placeholder="Assunto do teste" required style="width:100%; padding:12px; border-radius:12px; border:1.5px solid #dde7f0; font-size:1rem;">
                 </div>
                 <div class="form-group">
-                    <label for="conteudo_teste"><i class="fas fa-edit"></i> Conteúdo (HTML)</label>
+                    <label for="conteudo_teste"><i class="fas fa-edit"></i> Conteúdo (HTML) para nova linha sem espaçamento utilize SHIFT+ENTER</label>
                     <textarea name="conteudo_teste" id="conteudo_teste" class="form-control" rows="8" style="width:100%; padding:12px; border-radius:12px; border:1.5px solid #dde7f0; font-size:1rem;"></textarea>
                 </div>
                 <div style="display:flex; gap:10px;">

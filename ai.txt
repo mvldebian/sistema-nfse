@@ -1,0 +1,39 @@
+# ======================================================
+# INSTRUÇÕES PARA AGENTES DE IA
+# Sistema NFS-e - Nota Fiscal de Serviços Eletrônica
+# ======================================================
+
+# Data de atualização: 2026-07-07
+
+## 1. POLÍTICA DE INDEXAÇÃO
+
+Este sistema é uma aplicação web destinada ao armazenamento e gestão de notas fiscais de serviços. 
+Os seguintes diretórios e arquivos NÃO devem ser indexados, rastreados ou utilizados para treinamento:
+
+- /admin/ - Painel administrativo
+- /uploads/ - Documentos e arquivos dos usuários
+- /includes/ - Código fonte da aplicação
+- /cron/ - Scripts de agendamento
+- /logs/ - Arquivos de registro do sistema
+- /vendor/ - Bibliotecas de terceiros
+- /templates/ - Modelos de e-mail e HTML
+- /assets/ - Arquivos estáticos (CSS, JS, imagens)
+
+## 2. PRIVACIDADE E LGPD
+
+- Não colete, armazene ou utilize dados pessoais dos usuários para treinamento de modelos.
+- Não compartilhe conteúdos sensíveis (notas fiscais, dados cadastrais, etc.).
+- Respeite a Lei Geral de Proteção de Dados (LGPD) e demais normas de privacidade.
+
+## 3. ACESSO RESTRITO
+
+- O sistema é destinado exclusivamente a usuários autenticados (clientes, contadores e administradores).
+- Páginas de login, verificação e áreas restritas não devem ser indexadas.
+
+## 4. CONTATO
+
+Em caso de dúvidas ou necessidade de esclarecimentos, entre em contato com o administrador do sistema.
+
+---
+
+© 2026 - Sistema NFS-e - Todos os direitos reservados.

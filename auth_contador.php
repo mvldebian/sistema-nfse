@@ -8,6 +8,16 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' || empty($_POST['email'])) {
     exit;
 }
 
+// ===== VALIDA TURNSTILE =====
+if (TURNSTILE_ENABLED) {
+    $token = $_POST['cf-turnstile-response'] ?? '';
+    if (!validar_turnstile($token)) {
+        $_SESSION['erro_contador'] = 'Falha na verificação de segurança. Tente Novamente.';
+        header('Location: contador_login.php');
+        exit;
+    }
+}
+
 $email = trim($_POST['email']);
 
 // Busca contador ativo
@@ -19,7 +29,7 @@ $stmt->execute([$email]);
 $contador = $stmt->fetch();
 
 if (!$contador) {
-    $_SESSION['erro_contador'] = 'Contador não encontrado ou desativado.';
+    $_SESSION['erro_contador'] = 'Contador não Encontrado ou Desativado.';
     header('Location: contador_login.php');
     exit;
 }
@@ -28,7 +38,6 @@ if (!$contador) {
 $codigo = gerar_codigo();
 $expiracao = date('Y-m-d H:i:s', strtotime('+5 minutes'));
 
-// Armazena código na sessão (não temos tabela para contador, usamos sessão)
 $_SESSION['contador_temp'] = [
     'id' => $contador['id'],
     'nome' => $contador['nome'],
@@ -39,15 +48,14 @@ $_SESSION['contador_temp'] = [
     'expiracao' => $expiracao
 ];
 
-// Envia e-mail com template específico
 $dados_email = [
     'nome' => $contador['nome'],
     'codigo' => $codigo
 ];
-$enviado = enviar_email($email, 'Código de acesso - Contador NFS', $dados_email, 'email_contador_codigo.php');
+$enviado = enviar_email($email, 'Sistema NFS-e - Código de Acesso para Contador', $dados_email, 'email_contador_codigo.php');
 
 if (!$enviado) {
-    $_SESSION['erro_contador'] = 'Erro ao enviar e-mail.';
+    $_SESSION['erro_contador'] = 'Erro ao enviar e-mail. Verifique as Configurações.';
     header('Location: contador_login.php');
     exit;
 }
