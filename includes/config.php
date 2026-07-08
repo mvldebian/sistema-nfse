@@ -14,9 +14,21 @@ define('DB_NAME', 'sistemanfse');
 define('BASE_URL', 'https://sistemanfse.seudominio.com.br');
 define('UPLOAD_DIR', __DIR__ . '/../uploads/');
 define('SITE_NAME', 'Sistema de NFS-e');
-
 define('FORCAR_TEMA_CLARO', true);
 define('QUOTA_BYTES', 1073741824); // 1 GB
+
+// ===== BACKUP =====
+define('BACKUP_DIR', __DIR__ . '/../backups/');
+define('TMP_DIR', __DIR__ . '/../tmp/');
+define('MAX_BACKUPS', 5);
+
+// Configurações FTP (opcional)
+define('FTP_ENABLED', false); // true para ativar envio automático
+define('FTP_HOST', 'ftp.seuservidor.com');
+define('FTP_USER', 'seuusuario');
+define('FTP_PASS', 'suasenha');
+define('FTP_PATH', '/backupsnfse/'); // caminho remoto
+define('FTP_PORT', 21);
 
 // Cloudflare Turnstile
 define('TURNSTILE_ENABLED', false);  // true = ativado, false = desativado
